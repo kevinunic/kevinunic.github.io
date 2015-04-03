@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Coding Boy</title>
+  <title>防止Android Handler内存泄露 | Coding Boy</title>
   <meta name="author" content="Kevin Yang">
   
   <meta name="description" content="kevin&#39;s blog | android | java">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="防止Android Handler内存泄露"/>
   <meta property="og:site_name" content="Coding Boy"/>
 
   
@@ -103,11 +103,11 @@ body{ -webkit-animation: bugfix infinite 1s; }
   	<div class="inner">
       <div class="padding">
     		
-          <h1></h1>
+          <h1>防止Android Handler内存泄露</h1>
           <ul>
             <li>
               <span class="heading-span">Posted on: </span>
-              <time datetime="2015-04-03T18:56:33.000Z">2015-04-04</time>
+              <time datetime="2015-04-03T18:59:12.000Z">2015-04-04</time>
             </li>
             
               <li>
@@ -137,10 +137,13 @@ body{ -webkit-animation: bugfix infinite 1s; }
       
       <div class="entry">
         
-          <h1 id="防止Android_Handler内存泄露">防止Android Handler内存泄露</h1><h2 id="Static_Runnable_Solution">Static Runnable Solution</h2><ul>
+          <h2 id="防止Android_Handler内存泄露">防止Android Handler内存泄露</h2><h3 id="Static_Runnable_Solution">Static Runnable Solution</h3><ul>
 <li>Use static inner classes (or outer classes)</li>
-<li>Use WeakReference to all objects manipulated from Handler/Runnable<h2 id="Cleanup_All_Messages_onDestroy">Cleanup All Messages onDestroy</h2>Handler class has an interesting feature removeCallbacksAndMessages  which can accept null as argument. It will remove all Runnables and Messages posted to a particular handler. Let’s use it in onDestroy.<br>This approach is way better than the previous one, as it keeps code clear and readable. <h2 id="Use_WeakHandler_Library">Use WeakHandler Library</h2>Visit Badoo’s github page, where you can fork it, or study it’s source code <a href="#">https://github.com/badoo/android-weak-handler</a></li>
+<li>Use WeakReference to all objects manipulated from Handler/Runnable</li>
 </ul>
+<h3 id="Cleanup_All_Messages_onDestroy">Cleanup All Messages onDestroy</h3><p>Handler class has an interesting feature removeCallbacksAndMessages  which can accept null as argument. It will remove all Runnables and Messages posted to a particular handler. Let’s use it in onDestroy.</p>
+<p>This approach is way better than the previous one, as it keeps code clear and readable. </p>
+<h3 id="Use_WeakHandler_Library">Use WeakHandler Library</h3><p>Visit Badoo’s github page, where you can fork it, or study it’s source code <a href="#">https://github.com/badoo/android-weak-handler</a></p>
 <hr>
 <p>文章整理自忘记记录链接的一篇博文</p>
 
@@ -149,7 +152,17 @@ body{ -webkit-animation: bugfix infinite 1s; }
       <footer>
         
           
+  
+  <div class="categories">
+    <a href="/categories/Android/">Android</a>
+  </div>
+
           
+  
+  <div class="tags">
+    <a href="/tags/Android/">Android</a>
+  </div>
+
           <div class="share">
   
 
@@ -218,7 +231,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
   <ul class="entry">
     
       <li>
-        <a href="/2015/04/04/防止Android Handler内存泄露/"></a>
+        <a href="/2015/04/04/防止Android Handler内存泄露/">防止Android Handler内存泄露</a>
       </li>
     
       <li>
@@ -234,7 +247,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
   <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Android/">Android</a><small>0</small></li>
+    <li><a href="/categories/Android/">Android</a><small>1</small></li>
   
     <li><a href="/categories/hexo/">hexo</a><small>1</small></li>
   
@@ -246,7 +259,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
 <div class="widget tag">
   <h3 class="title">标签</h3>
   
-    <a href="/tags/Android/">Android<small>0</small></a>
+    <a href="/tags/Android/">Android<small>1</small></a>
   
     <a href="/tags/android/">android<small>0</small></a>
   
