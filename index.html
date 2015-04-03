@@ -126,7 +126,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
           <ul>
             <li>
               <span class="heading-span">Posted on: </span>
-              <time datetime="2015-04-03T18:53:29.000Z">2015-04-04</time>
+              <time datetime="2015-04-03T18:56:33.000Z">2015-04-04</time>
             </li>
             
               <li>
@@ -149,8 +149,10 @@ body{ -webkit-animation: bugfix infinite 1s; }
           
             <h1 id="防止Android_Handler内存泄露">防止Android Handler内存泄露</h1><h2 id="Static_Runnable_Solution">Static Runnable Solution</h2><ul>
 <li>Use static inner classes (or outer classes)</li>
-<li>Use WeakReference to all objects manipulated from Handler/Runnable<h2 id="Cleanup_All_Messages_onDestroy">Cleanup All Messages onDestroy</h2>Handler class has an interesting feature removeCallbacksAndMessages  which can accept null as argument. It will remove all Runnables and Messages posted to a particular handler. Let’s use it in onDestroy.<br>This approach is way better than the previous one, as it keeps code clear and readable. <h2 id="Use_WeakHandler_Library">Use WeakHandler Library</h2>Visit Badoo’s github page, where you can fork it, or study it’s source code <a href="#">https://github.com/badoo/android-weak-handler</a><br><strong>_</strong> 文章整理自忘记记录链接的一篇博文</li>
+<li>Use WeakReference to all objects manipulated from Handler/Runnable<h2 id="Cleanup_All_Messages_onDestroy">Cleanup All Messages onDestroy</h2>Handler class has an interesting feature removeCallbacksAndMessages  which can accept null as argument. It will remove all Runnables and Messages posted to a particular handler. Let’s use it in onDestroy.<br>This approach is way better than the previous one, as it keeps code clear and readable. <h2 id="Use_WeakHandler_Library">Use WeakHandler Library</h2>Visit Badoo’s github page, where you can fork it, or study it’s source code <a href="#">https://github.com/badoo/android-weak-handler</a></li>
 </ul>
+<hr>
+<p>文章整理自忘记记录链接的一篇博文</p>
 
           
         
