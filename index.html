@@ -120,6 +120,67 @@ body{ -webkit-animation: bugfix infinite 1s; }
           <div class="icon"></div>
             
     
+      <h1 class="title transition"><a href="/2015/04/04/防止Android Handler内存泄露/">防止Android Handler内存泄露</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2015-04-03T18:45:38.000Z">2015-04-04</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">Kevin Yang</a>
+                
+
+              </li>
+            
+            <li>
+              <span class="heading-span">With: </span>
+              
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h1 id="防止Android_Handler内存泄露">防止Android Handler内存泄露</h1><h2 id="Static_Runnable_Solution">Static Runnable Solution</h2><ul>
+<li>Use static inner classes (or outer classes)</li>
+<li>Use WeakReference to all objects manipulated from Handler/Runnable<h2 id="Cleanup_All_Messages_onDestroy">Cleanup All Messages onDestroy</h2>Handler class has an interesting feature removeCallbacksAndMessages  which can accept null as argument. It will remove all Runnables and Messages posted to a particular handler. Let’s use it in onDestroy.</li>
+</ul>
+<p>This approach is way better than the previous one, as it keeps code clear and readable. </p>
+<h2 id="Use_WeakHandler_Library">Use WeakHandler Library</h2><p>Visit Badoo’s github page, where you can fork it, or study it’s source code <a href="#">https://github.com/badoo/android-weak-handler</a></p>
+
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2015/04/04/防止Android Handler内存泄露/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
       <h1 class="title transition"><a href="/2015/04/04/hello-world/">Hexo build blog</a></h1>
     
   
@@ -195,6 +256,10 @@ body{ -webkit-animation: bugfix infinite 1s; }
   <ul class="entry">
     
       <li>
+        <a href="/2015/04/04/防止Android Handler内存泄露/">防止Android Handler内存泄露</a>
+      </li>
+    
+      <li>
         <a href="/2015/04/04/hello-world/">Hexo build blog</a>
       </li>
     
@@ -207,6 +272,8 @@ body{ -webkit-animation: bugfix infinite 1s; }
   <h3 class="title">分类</h3>
   <ul class="entry">
   
+    <li><a href="/categories/Android/">Android</a><small>1</small></li>
+  
     <li><a href="/categories/hexo/">hexo</a><small>1</small></li>
   
   </ul>
@@ -216,6 +283,8 @@ body{ -webkit-animation: bugfix infinite 1s; }
 	  
 <div class="widget tag">
   <h3 class="title">标签</h3>
+  
+    <a href="/tags/Android/">Android<small>1</small></a>
   
     <a href="/tags/hexo/">hexo<small>1</small></a>
   
